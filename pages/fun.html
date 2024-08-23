@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falling Cubes</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .cube {
+            width: 50px;
+            height: 50px;
+            background-color: #f00;
+            position: absolute;
+            top: -50px;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createCube() {
+            const cube = document.createElement('div');
+            cube.classList.add('cube');
+            cube.style.left = Math.random() * window.innerWidth + 'px';
+            cube.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            document.body.appendChild(cube);
+            setTimeout(() => {
+                cube.remove();
+            }, 5000);
+        }
+
+        setInterval(createCube, 500);
+    </script>
+</body>
+</html>
