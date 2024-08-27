@@ -1,0 +1,79 @@
+body {
+    background-color: #2690d6;
+}
+
+.header {
+    background-color: #fff;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 1px;
+    padding: 1px;
+    border-radius: 10px;
+}
+
+.header h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(15, 76, 155);
+    margin: 1px;
+    padding: 1px;
+    border-radius: 10px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 1%;
+}
+
+nav a {
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.main {
+    text-align: center;
+}
+
+/*//////////BURGER//////////*/
+
+.topbun {
+    background-color: rgb(163, 125, 74);
+    width: 8%;
+    margin: 0 auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.lettuce {
+    background-color: rgb(59, 151, 6);
+    width: 9%;
+    max-height: 6px;
+    margin: 0 auto;
+}
+
+.cheese {
+    background-color: rgb(226, 211, 4);
+    width: 7.5%;
+    max-height: 4px;
+    margin: 0 auto;
+}
+
+.burger {
+    background-color: rgb(63, 37, 4);
+    width: 7%;
+    max-height: 13px;
+    margin: 0 auto;
+}
+
+.bottombun {
+    background-color: rgb(163, 125, 74);
+    width: 8%;
+    margin: 0 auto;
+    max-height: 15px;
+    border-radius: 5px;
+}
