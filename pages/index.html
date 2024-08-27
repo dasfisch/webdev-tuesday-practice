@@ -3,33 +3,72 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to my Page!</title>
+        <title>Web Dev Practice - Home</title>
         <link rel="stylesheet" href="/styles/styles.css">
     </head>
     <body>
         <header>
-            <div class="hero-image">
-                <h1>Main Page</h1>
-            </div>
             <nav>
+                <!--TODO make this navbar dynamic so new pages only need to be added in one place (JS)-->
+                <h2 id="nav-label">web-dev-tuesday</h2>
                 <ul>
-                    <li><a href="index.html">Main Page</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="kittens.html">kittens</a></li>
                     <li><a href="evan.html">Evan</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <!--TODO Add dropdown nav to display student pages-->
+                    <!--TODO Add more pages-->
                 </ul>
             </nav>
+            <div class="hero-image">
+                <h1 id="hero-header">Main Page</h1>
+            </div>
         </header>
         <main>
-            <h1>Hello</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae non maxime ea quis! Earum alias libero sed dolores eos quam, fuga laborum eaque cupiditate adipisci in porro, optio debitis molestias.</p>
+            <section>
+                <h2>Welcome to our collaboration space!</h2>
+                <p>This website serves as a central location for us to collaborate as a class.Everyone is encouraged to modify the page however you would like. Change the css, the layout, add new functionality, add more content, or suggest changes.</p>
+                <br/>
+                <p>The benefit here is to learn how to collaborate in a shared codebase. It provides a hands-on experience that is important to have in a professional setting. Additionally it serves as a great piece to share in your portfolio, to show that you have worked on a project with others.</p>
+                <br/>
+                <h3>Expectations:</h3>
+                <ul>
+                    <li>Create a branch for your own features and add them in to the main branch through a pull request.</li>
+                    <li>Explore concepts and add them to the the website. This can be done by:</li>
+                    <ul>
+                        <li>Adding your own page with content and linking it through the navbar</li>
+                        <li>Completing a TODO task anywhere in the project</li>
+                        <li>Adding new functionality to the website</li>
+                    </ul>
+                </ul>
+                <br/>
+                <article class="question-answer">
+                    <p><strong>Q.</strong> <i>What if I complete a TODO task someone else has already done or add something we already have?</i></p>
+                    <br/>
+                    <p><strong>A.</strong> Repeated work is fine, even encouraged. It can be beneficial to see different ways of solving the same problem. This website is not meant to be perfect, just a collaborative sandbox to explore concepts and learn.<br/>If you start something and get stuck, ask someone or add a comment and someone can pick up where you left off.</p>
+                </article>
+            </section>
             <figure>
-                <img src="/img/20171114_193105 (2021_10_05 21_31_37 UTC).jpg" width="50px" height="70px">
+                <img src="/images/20171114_193105 (2021_10_05 21_31_37 UTC).jpg" width="50px" height="70px">
                 <figcaption>My cat as a baby</figcaption>
             </figure>
+            <section id="class-time">
+                <article>
+                    <h3>Questions?</h3>
+                    <p>Add your questions here if there is something you ned help understanding or would like to learn about.</p>
+                    <ul>
+                        <!--TODO Add questions and interests-->
+                    </ul>
+                </article>
+                <aside>
+                    <!--TODO Add a clock that displays if it is class time or not (JS)-->
+                    <!--TODO Add a countdown to display how many days left until the capstone project (JS)-->
+                </aside>
+            </section>
         </main>
         <footer>
-
+            <!--TODO Fill out the footer section on each page-->
         </footer>
     </body>
 </html>
