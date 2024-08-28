@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web Dev Practice - Contact</title>
-        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="../styles/styles.css">
     </head>
     <body>
         <header>
@@ -19,16 +19,22 @@
         </header>
         <main>
             <h1>Contact Us:</h1>
-            <form method="post" action="mailto:delia.grimwood@gmail.com" enctype="application/x-www-form-urlencoded">
-                <label for="firstname">First name:</label>
+            <form method="get" action="contact.html" id="contact-form">
+                <label for="firstname" class="label">First name:</label>
                 <input type="text" name="firstname" id="firstname"/>
-                <label for="lastname">Last name:</label>
+
+                <label for="lastname" class="label">Last name:</label>
                 <input type="text" name="lastname" id="lastname"/>
-                <input type="submit" value="submit"/>
+
+                <label for="email" class="label">Last name:</label>
+                <input type="text" name="email" id="email"/>
+
+                <input type="submit" value="submit" id="submit-button" />
             </form>
         </main>
         <footer>
 
         </footer>
     </body>
+    <script src="../js/index.js"></script>
 </html>
