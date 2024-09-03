@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web Dev Practice - Contact</title>
-        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="Javascript" href="/index/index.js">
     </head>
     <body>
         <header>
@@ -12,20 +13,18 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Main Page</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="kittens.html">kittens</a></li>
-                    <li><a href="evan.html">Evan</a></li>
+                    <li><a href="">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <h1>Contact Us:</h1>
-            <form method="get" action="contact.html" id="contact-form">
+            <form method="post" action="mailto:delia.grimwood@gmail.com" enctype="application/x-www-form-urlencoded" id="contact-form">
                 <label for="firstname">First name:</label>
                 <input type="text" name="firstname" id="firstname"/>
                 <label for="lastname">Last name:</label>
                 <input type="text" name="lastname" id="lastname"/>
-                <input type="submit" value="submit" id="submit-button"/>
+                <input type="submit" value="submit"/>
             </form>
         </main>
         <footer>
