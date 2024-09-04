@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+}
+
+.headerr {
+    margin: 0;
+}
+
+.hero-image {
+    background-image: url('/img/mando.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.enter-mando {
+    padding: 1rem;
+}
+
+.lyrics {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: small;
+}
+
+.stanza {
+    padding: .5rem;
+}
+
+nav {
+    background-color: lightblue;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+main {
+    /* display: flex; */
+    background-color: rgb(235, 236, 209);
+    border: 5px inset magenta;
+    border-style: dotted;
+    height: 100%;
+}
+
+midi-player::part(control-panel) {
+    background: aquamarine;
+}
