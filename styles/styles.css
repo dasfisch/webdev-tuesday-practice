@@ -29,3 +29,13 @@ main {
     border: 5px dotted #f0f;
     height: 100%;
 }
+
+.label {
+    color: green;
+    transition: color 1000ms;
+}
+
+.label.error {
+    color: red;
+    transition: color 1000ms;
+}
