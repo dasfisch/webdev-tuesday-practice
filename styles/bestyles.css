@@ -1,0 +1,29 @@
+.hero-image {
+    background-color: bisque;
+    background-size: cover;
+    height: 200px;
+}
+
+nav {
+    background-color: lightblue;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+main {
+    background-color: rgb(24, 208, 225);
+    
+    height: 100%;
