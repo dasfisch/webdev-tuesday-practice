@@ -1,63 +1,78 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .headerr {
-    margin: 0;
+  margin: 0;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  justify-content: center;
+}
+
+.midi-player-info {
+  display: flex;
+  justify-content: center;
+  font-size: smaller;
+  margin: 0%;
+  padding: 5px;
+}
+
+
 .hero-image {
-    background-image: url('/img/mando.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-image: url("/img/mando.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 .enter-mando {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .lyrics {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-size: small;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: small;
 }
 
 .stanza {
-    padding: .5rem;
+  padding: 0.5rem;
 }
 
 nav {
-    background-color: lightblue;
-    margin: 0;
+  background-color: lightblue;
+  margin: 0;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    display: flex;
+  list-style: none;
+  margin: 0;
+  display: flex;
 }
 
 nav li {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 nav a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 main {
-    /* display: flex; */
-    background-color: rgb(235, 236, 209);
-    border: 5px inset magenta;
-    border-style: dotted;
-    height: 100%;
+  background-color: rgb(235, 236, 209);
+  border: 5px inset magenta;
+  border-style: dotted;
+  height: 100%;
 }
 
 midi-player::part(control-panel) {
-    background: aqua
+  background: aqua;
 }
