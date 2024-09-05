@@ -21,6 +21,18 @@ footer {
   padding: 5px;
 }
 
+#midi-visualizer {
+    display: flex;
+    justify-content: center;
+}
+
+.image-credit {
+    display: flex;
+    justify-content: center;
+    font-size: smaller;
+    margin: 0%;
+    padding: 5px;
+}
 
 .hero-image {
   background-image: url("/img/mando.jpg");
