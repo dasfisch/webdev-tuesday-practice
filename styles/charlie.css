@@ -9,6 +9,7 @@ nav {
   position: fixed;
   background-color: lightblue;
   margin: 0;
+  z-index: 999;
 }
 
 nav ul {
@@ -26,8 +27,6 @@ nav a {
 }
 
 main {
-  /* background-color: rgb(235, 236, 209); */
-  /* border: 5px inset magenta; */
   border-style: dotted;
   height: 100%;
   position: relative;
