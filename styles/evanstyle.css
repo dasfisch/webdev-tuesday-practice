@@ -1,31 +1,34 @@
 body {
-    background-color: #2690d6;
+    background-color: rgb(119, 119, 119);
 }
 
 .header {
     background-color: #fff;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 1px;
-    padding: 1px;
-    border-radius: 10px;
+    margin: 0 auto;
+    padding: 0 auto;
+    border: 2px solid black;
+    border-bottom: 0px;
 }
 
-.header h1, p {
+.header h1 {
     margin: 0;
     padding: 0;
 }
 
 nav {
-    background-color: rgb(15, 76, 155);
-    margin: 1px;
-    padding: 1px;
-    border-radius: 10px;
+    background-color: #000;
+    margin: 0 auto;
+    padding: 0 auto;
+    border: 2px solid black;
+    border-top: 0px;
 }
 nav ul {
     display: flex;
     list-style: none;
     margin: 0 auto;
+    padding: 0 auto;
     justify-content: center;
     gap: 1%;
 }
@@ -39,44 +42,218 @@ nav a {
     text-align: center;
 }
 
-/*//////////BURGER//////////*/
-
-
-/*
-.topbun {
-    background-color: rgb(163, 125, 74);
-    width: 8%;
-    margin: 0 auto;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+.teamstats {
+    background-color: rgb(15, 76, 155, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
-.lettuce {
-    background-color: rgb(59, 151, 6);
-    width: 9%;
-    max-height: 6px;
+.teamstats h1 {
     margin: 0 auto;
+    padding: 0 auto;
 }
 
-.cheese {
-    background-color: rgb(226, 211, 4);
-    width: 7.5%;
-    max-height: 4px;
-    margin: 0 auto;
+.teamname {
+    color: #000;
+    margin: 15px;
+    margin-bottom: 0;
 }
 
-.burger {
-    background-color: rgb(63, 37, 4);
-    width: 7%;
-    max-height: 13px;
-    margin: 0 auto;
+/*TEAM SELECTION STYLE - DEMO CLASSES*/
+
+.demo {
+    background-color: rgb(15, 76, 155);
+    color: #fff;
 }
 
-.bottombun {
-    background-color: rgb(163, 125, 74);
-    width: 8%;
-    margin: 0 auto;
-    max-height: 15px;
-    border-radius: 5px;
+.demoAlabama {
+    background-color: rgb(158, 27, 50);
+    color: #fff;
 }
-    */
+
+.demoArkansas {
+    background-color: rgb(157, 34, 53);
+    color: #fff;
+}
+
+.demoAuburn {
+    background-color: rgb(12, 35, 64);
+    color: rgb(232, 119, 34);
+}
+
+.demoFlorida {
+    background-color: rgb(250, 70, 22);
+    color: rgb(0, 33, 165);
+}
+
+.demoGeorgia {
+    background-color: rgb(186, 12, 47);
+    color: #000;
+}
+
+.demoKentucky {
+    background-color: rgb(0, 51, 160);
+    color: #fff;
+}
+
+.demoLSU {
+    background-color: rgb(70, 29, 124);
+    color: rgb(253, 208, 35);
+}
+
+.demoMSState {
+    background-color: rgb(102, 0, 0);
+    color: #fff;
+}
+
+.demoMissouri {
+    background-color: rgb(241, 184, 45);
+    color: #000;
+}
+
+.demoOklahoma {
+    background-color: rgb(132, 23, 25);
+    color: rgb(253, 249, 216);
+}
+
+.demoOleMiss {
+    background-color: rgb(22, 43, 72);
+    color: #fff;
+}
+
+.demoSouthCarolina {
+    background-color: rgb(115, 0, 10);
+    color: #000;
+}
+
+.demoTennessee {
+    background-color: rgb(255, 130, 0);
+    color: #fff;
+}
+
+.demoTexas {
+    background-color: rgb(191, 87, 0);
+    color: #fff;
+}
+
+.demoTexasAM {
+    background-color: rgb(80, 0, 0);
+    color: #fff;
+}
+
+.demoVanderbilt {
+    background-color: rgb(134, 109, 75);
+    color: #000;
+}
+
+/*TEAM SELECTION STYLE - TEAMSELECTION DIV CLASSES*/
+
+.teamstatsAlabama {
+    background-color: rgb(158, 27, 50, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsArkansas {
+    background-color: rgb(157, 34, 53, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsAuburn {
+    background-color: rgb(12, 35, 64, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsFlorida {
+    background-color: rgb(250, 70, 22, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsGeorgia {
+    background-color: rgb(186, 12, 47, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsKentucky {
+    background-color: rgb(0, 51, 160, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsLSU {
+    background-color: rgb(70, 29, 124, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsMSState {
+    background-color: rgb(102, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsMissouri {
+    background-color: rgb(241, 184, 45, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsOklahoma {
+    background-color: rgb(132, 23, 25, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsOleMiss {
+    background-color: rgb(22, 43, 72, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsSouthCarolina {
+    background-color: rgb(115, 0, 10, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsTennessee {
+    background-color: rgb(255, 130, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsTexas {
+    background-color: rgb(191, 87, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsTexasAM {
+    background-color: rgb(80, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.teamstatsVanderbilt {
+    background-color: rgb(134, 109, 75, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/*TEAM SELECTION STYLE - TEAMSELECTION MEDIA*/
+
+.demo2 {
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 10px;
+}
+
+.demo3 {
+    max-width: 300px;
+    max-height: 200px;
+    margin-bottom: 10px;
+}
