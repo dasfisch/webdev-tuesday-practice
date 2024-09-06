@@ -10,7 +10,6 @@
 <body>
     <div class="header">
         <h1>Evan's Page</h1>
-        <p>This is Evan's page, a part of the Web Dev group project. What's on here? Who knows, I haven't gotten that far! Maybe I should start with the nav bar?</p>
     </div>
     <nav>
         <ul>
@@ -21,15 +20,36 @@
         </ul>
     </nav>
     <div class="main">
-        <!--<h3>So this is the main body. What shall we do with it? How about we make a burger using CSS?</h3>
-        <div class="hamburger">
-            <div class="topbun">&nbsp</div>
-            <div class="lettuce">&nbsp</div>
-            <div class="cheese">&nbsp</div>
-            <div class="burger">&nbsp</div>
-            <div class="bottombun">&nbsp</div>
-        </div>-->
+        <div id="teamstats" class="teamstats">
+            <form name="secteams">
+                <select name="teamname" id="teamname" class="teamname" onChange="teamSelection()">
+                    <option value="empty">Select a Team</option>
+                    <option value="alabama">Alabama</option>
+                    <option value="arkansas">Arkansas</option>
+                    <option value="auburn">Auburn</option>
+                    <option value="florida">Florida</option>
+                    <option value="georgia">Georgia</option>
+                    <option value="kentucky">Kentucky</option>
+                    <option value="lsu">LSU</option>
+                    <option value="msstate">Mississippi State</option>
+                    <option value="missouri">Missouri</option>
+                    <option value="oklahoma">Oklahoma</option>
+                    <option value="olemiss">Ole Miss</option>
+                    <option value="scar">South Carolina</option>
+                    <option value="tennessee">Tennessee</option>
+                    <option value="texas">Texas</option>
+                    <option value="texasam">Texas A&M</option>
+                    <option value="vanderbilt">Vanderbilt</option>
+                </select>
+            </form>
+
+            <h2 id="demo" class="demo">Select an SEC team above!</h2>
+            <img id="demo2" class="demo2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Southeastern_Conference_logo.svg/154px-Southeastern_Conference_logo.svg.png">
+            <h3>Fight Song</h3>
+            <audio controls id="demo3" class="demo3" src=""></audio>
+
+        </div>
     </div>
-    <script src="../js/index.js"></script>
+    <script src="../js/evanindex.js"></script>
 </body>
 </html>
