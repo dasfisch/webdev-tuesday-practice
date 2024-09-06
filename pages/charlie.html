@@ -13,23 +13,31 @@
           <li><a href="index.html">Main Page</a></li>
         </ul>
       </nav>
-      <div class="hero-image">
-        <br>
-        <h3 class="headerr">The perfect song doesn't ex....</h3>
-        <h1 class="enter-mando">
-          Enter "MANDOLIN RAIN" by Bruce Hornsby and The Range
-        </h1>
-        <h2>THE PERFECT SONG</h2>
-        <br>
-        <div id="midi-container">
-          <midi-player id="midi-player" src="/img/mandolin-rain.mid" sound-font visualizer="midi-visualizer"></midi-player>
-        </div>
-      </div>
     </header>
     <main>
-      <di>
-        <div  class="lyrics">🎶🎹🪕🎶🪕🎶🎹🪕🎶🪕🎶🪕🎹
-            <div class="stanza">
+      <div class="hero-section">
+        <img src="/img/mando.jpg" class="hero-image" alt="Image of a mandolin in sunburst red finish superimposed over serene lake at sunset whose shores are dotted with scraggly pines." >
+      </div>
+      <div class="content-container">
+        <div class="headline">
+          <h3>The perfect song doesn't ex....</h3>
+          <h1>
+            Enter "MANDOLIN RAIN" by Bruce Hornsby and The Range
+          </h1>
+          <h2>THE PERFECT SONG</h2>
+          <br>
+          <h3 id="play-now">PLAY NOW</h3>
+        </div>
+      </div>
+        
+        <div ">
+          <br>
+          <div class="midi-player-container">
+            <midi-player src="/img/mandolin-rain.mid" sound-font visualizer="midi-visualizer"></midi-player>
+          </div>
+        </div>
+        <div class="lyrics">🎶🎹🪕🎶🪕🎶🎹🪕🎶🪕🎶🪕🎹>
+          <div class="stanza">
                 The song came and went, like the times that we spent <br>
                 Hiding out from the rain under the carnival tent<br>
                 Often she'd smile it would last for a while<br>
@@ -93,14 +101,14 @@
                 Written by: John Hornsby, Bruce Hornsby<br>            
                 Album: The Way It Is<br>
                 Released: 1986<br>
-            </div>🎶🎹🪕🎶🪕🎶🎹🪕🎶🪕🎶🪕🎹
+                <div>🎶🎹🪕🎶🪕🎶🎹🪕🎶🪕🎶🪕🎹</div>
+                <midi-visualizer type="waterfall" id="midi-visualizer"></midi-visualizer>
+            </div>
         </div>
-      </div>
     </main>
     <footer>
-          <!-- <midi-visualizer type="piano-roll" id="midi-visualizer"></midi-visualizer> -->
-          <!-- <midi-visualizer type="staff" id="midi-visualizer"></midi-visualizer> -->
-          <midi-visualizer type="waterfall" id="midi-visualizer"></midi-visualizer>
+      <!-- <midi-visualizer type="piano-roll" id="midi-visualizer"></midi-visualizer> -->
+      <!-- <midi-visualizer type="staff" id="midi-visualizer"></midi-visualizer> -->
       <p class="midi-player-info">For more information, see<span>&nbsp;</span><a href="https://github.com/cifkao/html-midi-player" target="_blank">the <strong>html-midi-player</strong> repository</a><span>&nbsp;</span>on GitHub.        
       </p>
       <p class="image-credit">Image credit:<span>&nbsp;</span><a href="https://www.youtube.com/watch?v=LVwWfcqoydg" target="_blank"><strong>https://www.youtube.com/watch?v=LVwWfcqoydg</strong></p>
@@ -108,3 +116,5 @@
   </body>
 </html>
 <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
+
+<!-- https://en.wikipedia.org/wiki/Mandolin_Rain -->
