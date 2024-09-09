@@ -88,7 +88,7 @@ function teamSelection() {
     document.getElementById("demo").className = "demoMSState";
     document.getElementById("teamstats").className = "teamstatsMSState";
     imgPlacer('https://content.sportslogos.net/logos/32/755/full/mississippi_state_bulldogs_logo_primary_19957845.png');
-    fightSong('../vid/msstate.mp4.mp4');
+    fightSong('../vid/msstate.mp4');
   }
 
   if (displayTeam === 9) {
