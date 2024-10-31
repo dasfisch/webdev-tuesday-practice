@@ -1,10 +1,28 @@
+import { printNamesToScreen } from './printing-functions/index.js';
+
 let gameIsRunning = true;
 let i = 0;
 
-function buttonHello(event) {
-    gameIsRunning = false;
+const users =
+    window.localStorage.getItem('users') !== null ?
+        JSON.parse(window.localStorage.getItem('users')) :
+        new Array();
 
-    let formIsValid = true;
+// What we want to know about a new user: first, last, email
+const user = {
+    first_name: '',
+    last_name: '',
+    email: ''
+};
+
+function addUser(event) {
+    if (typeof event === 'undefined') {
+        throw new Error('You didnt pass an error!');
+    }
+
+    event.preventDefault();
+
+    gameIsRunning = false;
 
     const firstNameField = document.getElementById('firstname');
     const firstNameLabel = document.getElementById('firstnamelabel');
@@ -19,51 +37,73 @@ function buttonHello(event) {
     const lastNameValue = lastNameField.value.trim();
     const emailValue = emailNameField.value.trim();
 
-    if (firstNameValue.length === 0 || lastNameValue.length === 0 || emailValue.length === 0) {
-        formIsValid = false;
-    }
+    const formIsValid = emailValue.length > 0 &&
+        firstNameValue.length > 0 &&
+        lastNameValue.length > 0;
 
     if (formIsValid === false) {
-        event.preventDefault();
+        if (firstNameValue.length === 0) {
+            firstNameLabel.className = firstNameLabel.className + ' error';
+        }
 
-        // for (let i = 0; i < labels.length; i++) {
-        //     // labels[i].style.color = 'red';
-        //     labels[i].className = labels[i].className + ' error';
-        // }
-    }
+        if (lastNameValue.length === 0) {
+            lastNameLabel.className = lastNameLabel.className + ' error';
+        }
 
-    if (firstNameValue.length === 0) {
-        firstNameLabel.className = firstNameLabel.className + ' error';
-    }
+        if (emailValue.length === 0) {
+            emailNameLabel.className = emailNameLabel.className + ' error';
+        }
+    } else {
+        const newUser = Object.assign({}, user);
 
-    if (lastNameValue.length === 0) {
-        lastNameLabel.className = lastNameLabel.className + ' error';
-    }
+        newUser.email = emailValue;
+        newUser.first_name = firstNameValue;
+        newUser.last_name = lastNameValue;
 
-    if (emailValue.length === 0) {
-        emailNameLabel.className = emailNameLabel.className + ' error';
+        newUser.name = `${ newUser.first_name } ${ newUser.last_name }`;
+
+        users.push(newUser);
+
+        window.localStorage.setItem('users', JSON.stringify(users));
+
+        printSingleUserToScreen(newUser);
     }
 }
 
 const listenToTyping = (event) => {
+    console.log('here');
     const currentFieldId = event.target.id;
 
     const label = document.getElementById(currentFieldId + 'label');
 
-    if (label.className.indexOf('error') === -1 && label.value.length === 0) {
+    if (label.className.indexOf('error') === -1 && event.target.value.length === 0) {
         label.className = label.className + ' error';
     } else if (event.target.value.length > 0) {
         label.className = 'label';
     }
 };
 
-const button = document.getElementById('submit-button');
+function reqListener() {
+    console.log(this.responseText);
+}
+
+const getUsers = () => {
+    console.log('user');
+
+    const req = new XMLHttpRequest();
+
+    req.addEventListener("load", reqListener);
+    req.open("GET", "http://localhost:3000/users/");
+    req.send();
+};
+
 const form = document.getElementById('contact-form');
-const labels = document.getElementsByClassName('label');
 const inputs = document.getElementsByTagName('input');
 
-form.addEventListener('submit', buttonHello);
+form.addEventListener('submit', addUser);
 
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener('keypress', listenToTyping);
 }
+
+getUsers();
