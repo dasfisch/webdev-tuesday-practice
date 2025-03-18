@@ -1,0 +1,28 @@
+body {
+    background-color: #f0f0f0;
+    margin: 10px;
+    font-size: 22px;
+}
+
+div {
+    border: 1px solid #000;
+    width: 49%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #000;
+}
+
+.main {
+    border: 1px solid #f00;
+}
+
+#main {
+    border: 1px solid #0f0;
+}
+
+body main .inner-div {
+    border: 1px solid #f0f;
+}
