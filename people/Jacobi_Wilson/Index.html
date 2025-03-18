@@ -3,26 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>My Favorite Things</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
             background-color: #f4f4f4;
             text-align: center;
-            padding: 50px;
         }
         header {
-            background-color: #333;
+            background-color: #4CAF50;
             color: white;
             padding: 20px;
-            border-radius: 10px;
         }
-        main {
-            margin-top: 20px;
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 20px;
-            background-color: white;
+        }
+        .card {
+            background: white;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -32,6 +46,24 @@
     </header>
     <main>
         <p>Hi, I'm a passionate developer with a love for coding, gaming, and problem-solving. I enjoy working with different technologies to create amazing projects.</p>
+        <details>
+            <summary>My Favorite Things</summary>
+            <ul class="cards">
+                <li class="card">                   
+                    <h2>Gaming</h2>
+                    <p>I enjoy gaming on my PS5 and Nintendo Switch playing games like Monster Hunter and Final Fantasy.</p>
+                </li>
+                <li class="card">
+                    <h2>Drawing</h2>
+                    <p>I enjoy drawing in my sketchbook or digitally.</p>
+                </li>
+                <li class="card">
+                    <h2>Programming</h2>
+                    <p>I enjoy the process of creating systems solving problems while debugging.</p>
+                </li>
+            </ul>
+        </details>
     </main>
 </body>
 </html>
+
