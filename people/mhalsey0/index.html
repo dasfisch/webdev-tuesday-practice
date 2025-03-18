@@ -9,22 +9,67 @@
     <header>
         <h1>Mike Halsey</h1>
     </header>
-    <main>
-        <p>
-            I am a 35 year old unemployed college drop out who is trying to learn coding to change my career. My hobbies include swimming, biking, and running (in that order) as well as spending time with my dog Bertie! You can see her below!
-        </p>
-        <img src="/people/mhalsey0/images/5C20DB62-0109-419E-9AFA-F96CE0B3AAFB_1_105_c.jpeg">
-    </main>
+    <div class="box">
+        <div>
+            <main>
+                <p id="summary">
+                    I am a 35 year old unemployed college drop out who is trying to learn coding to change my career. My hobbies include swimming, biking, and running (in that order) as well as spending time with my dog Bertie! You can see her picutre in my favorite things!
+                </p>
+            </main>
+        </div>
+        <div>
+            <details>
+                <summary>
+                    My Favorite Things
+                </summary>
+                <ul>
+                    <li>
+                    <img src="/people/mhalsey0/images/Bertie.jpeg">
+                    <h2>Bertie</h2>
+                    <p>My foster failed Siberian Husky who is too smart for her own good.</p>
+                    </li>
+                    <li>
+                    <img src="/people/mhalsey0/images/ElizabethAndMe.jpeg">
+                    <h2>Elizabeth</h2>
+                    <p>Elizabeth is my partner and biggest supporter in life!</p>
+                    </li>
+                    <li>
+                    <img src="/people/mhalsey0/images/Biking.jpeg">
+                    <h2>Biking</h2>
+                    <p>I love biking around louisivlle and I have completed 2 half Ironman races and 6 half Ironman races.</p>
+                    </li>
+                    <li>
+                    <img src="https://cdn.staticneo.com/w/naruto/Nprofile2.jpg">
+                    <h2>Naruto</h2>
+                    <p>My current binge watch show is Naruto. I've never seen it before so please do not share any spoilers!</p>
+                    </li>
+                </ul>
+            </details>
+        </div>
+    </div>
 </body>
 <style>
     * {
         text-align: left;
         background-color: lavender;
     }
-    p {
+    h1 {
         text-align: center;
+    }
+    #summary {
+        text-align: center;
+        padding: 100px;
         height: 200px;
         width: 180px;
     }
+    .box {
+        display: flex;
+    }
+    img {
+        height: auto;
+        width: 100px;
+    }
+
+
 </style>
 </html>
