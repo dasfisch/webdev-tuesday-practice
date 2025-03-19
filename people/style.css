@@ -1,9 +1,35 @@
 body {
-    background-color: antiquewhite;
-    color: red;
-    font-family: Arial, sans-serif;
-    font-size: 1.2em;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #b2beb5;
+}
+
+header {
+  background-color: #1b4d3e;
+  color: white;
+  padding: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 200px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 5px;
 }
