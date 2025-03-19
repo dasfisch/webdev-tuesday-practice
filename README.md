@@ -1,12 +1,7 @@
 # About Me Project
 
 - Clone this repo
-    <details>
-        <summary>Hint</summary>
-        ```
-        git clone git@github.com:dasfisch/webdev-tuesday-practice.git
-        ```
-    </details>
+    - `git clone git@github.com:dasfisch/webdev-tuesday-practice.git`
 - Create a branch and switch to branch
     - `git checkout -b <username>-1`
         - You can check your current branch with `git branch -v`
