@@ -8,22 +8,22 @@
         ```
     </details>
 - Create a branch and switch to branch
-    - `git checkout -b <username>-1`
-        - You can check your current branch with `git branch -v`
+  - `git checkout -b <username>-1`
+    - You can check your current branch with `git branch -v`
 - Create a new folder in `people/` with your name
-    - example `people/nswinford/`
+  - example `people/nswinford/`
 - Create an `index.html` file in that folder.
 - It should have a `<header>` and `<main` tag.
-    - `<header>` should a `<h1>` tag with your name.
-    - `<main>` should have a `<p>` tag with a short description of yourself.
+  - `<header>` should a `<h1>` tag with your name.
+  - `<main>` should have a `<p>` tag with a short description of yourself.
 - Add a `<style>` tag with CSS.
-    - Style your page however you like with fonts, colors and anything else!
+  - Style your page however you like with fonts, colors and anything else!
 - Add all your changes to staging
-    - `git add ...`
+  - `git add ...`
 - Commit the changes with a message
-    - `git commit -m "<an example message>"`
+  - `git commit -m "<an example message>"`
 - Push your branch to the repo
-    - `git push origin <username-1>`
+  - `git push origin <username-1>`
 
 ## "My Favorite Things" Cards
 
