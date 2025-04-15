@@ -1,15 +1,39 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/array.js"></script>
-    <script src="./js/index.js"></script>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+            rel="stylesheet"
+            href="./css/main.css"
+    >
+    <title>Cat Adder</title>
+</head>
 
-  <body>
-    <h1>These are cool pics!</h1>
-    <div>
-      <ul id="catPics">
-      </ul>
-    </div>
-  </body>
+<body>
+<h1>These are cool pics!</h1>
+<div>
+    <form
+            action="./array.html"
+            id="cat_name_form"
+            method="get"
+    >
+        <label for="cat_name">Cat name</label>
+        <input
+                id="cat_name"
+                type="text"
+                name="cat_name"
+        />
+        <button type="submit">
+            Add Cat
+        </button>
+        <p
+                class="error hidden"
+                id="cat-name-error"
+        >Cat name Error</p>
+    </form>
+    <ul id="catPics">
+    </ul>
+</div>
+<script src="./js/array.js"></script>
+<script src="./js/index.js"></script>
+</body>
 </html>

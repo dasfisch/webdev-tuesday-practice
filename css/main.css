@@ -6,7 +6,7 @@ body {
 
 div {
     border: 1px solid #000;
-    width: 49%;
+    width: 100%;
 }
 
 main {
@@ -25,4 +25,24 @@ main {
 
 body main .inner-div {
     border: 1px solid #f0f;
+}
+
+#catPics {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#catPics li {
+    list-style: none;
+    width: 33%;
+}
+
+.error {
+    color: #f00;
+    display: block;
+}
+
+.error.hidden {
+    display: none;
 }
