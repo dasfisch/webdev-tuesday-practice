@@ -1,5 +1,12 @@
 console.log('hi');
 
-const p = document.getElementById('main');
+window.addEventListener("load", (event) => {
+    addCatPics();
+});
 
-p.innerText = 'Hi!';
+document.addEventListener("click", (event) => {
+    addCatPics();
+});
+
+
+//index.js:7 Uncaught TypeError: document.onclick is not a function
