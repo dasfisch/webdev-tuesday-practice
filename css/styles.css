@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background-color: #35424a;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+main {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+footer {
+    background-color: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+    margin: 5px 0;
+}
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+}
+/*Make list items a grid 3 wide*/
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+#country-list li:hover {
+    background-color: red;
+}
+@media (max-width: 1000px) and (min-width: 601px) {
+    ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #country-list li:hover {
+        background-color: blue;
+    }
+}
+/*Make the background red when on mobile device*/
+@media (max-width: 600px) {
+    body {
+        background-color: #ffcccc;
+    }
+    ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #country-list li:hover:first-child {
+        background-color: white;
+        color: black;
+    }
+}
+/*If the user prefers dark mode make the ul background dark grey */
+@media (prefers-color-scheme: dark) {
+    ul {
+        background-color: #333;
+        color: #fff;
+    }
+}
