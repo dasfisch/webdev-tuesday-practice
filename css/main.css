@@ -1,48 +1,47 @@
 body {
-    background-color: #f0f0f0;
-    margin: 10px;
-    font-size: 22px;
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: normal;
 }
 
-div {
-    border: 1px solid #000;
+.form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    justify-self: center;
+    width: 25vw;
+}
+
+.form .form-item,
+.form .form-item-button {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
     width: 100%;
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid #000;
-}
-
-.main {
-    border: 1px solid #f00;
-}
-
-#main {
-    border: 1px solid #0f0;
-}
-
-body main .inner-div {
-    border: 1px solid #f0f;
-}
-
-#catPics {
-    display: flex;
-    flex-wrap: wrap;
+.form .form-item-button {
+    flex-direction: row;
+    justify-content: space-evenly;
     width: 100%;
 }
 
-#catPics li {
-    list-style: none;
-    width: 33%;
+.form .form-item .item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form .form-item .item label {
+    margin-bottom: 0.5rem;
 }
 
 .error {
-    color: #f00;
-    display: block;
-}
-
-.error.hidden {
+    color: red;
     display: none;
+    margin-top: .5rem;
 }

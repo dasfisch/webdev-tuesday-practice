@@ -1,36 +1,53 @@
-<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+    <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+            http-equiv="X-UA-Compatible"
+            content="ie=edge"
+    >
 
-        <title>Code:You January Cohort</title>
+    <title>Code:You January Cohort</title>
 
-        <link rel="stylesheet" href="css/reset.css" />
-        <link rel="stylesheet" href="css/main.css" />
-    </head>
-    <body>
-        <header>
-            <h1>Code:You January Cohort Home</h1>
-            <p>Hello, class</p>
-        </header>
-        <main id="main" class="main">
-            <div class="inner-div">
-                <p class="inner-div">Hi y'all</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+<main>
+    <form action="#" id="to-dos" method="post">
+        <div class="form">
+            <div class="form-item" id="form-holder">
+                <div class="item" id="form-item-1">
+                    <label for="item-1" aria-label="Hello">To-do Item 1</label>
+                    <input type="text" name="item-1" id="item-1" />
+                    <p class="error">
+                        Enter valid to-do item
+                    </p>
+                </div>
             </div>
-            <div>
-                <p>Staying a while?</p>
+            <div class="form-item-button">
+                <button type="submit" id="add-new">
+                    Add new
+                </button>
+                <button
+                        type="submit"
+                        id="submit"
+                        disabled="disabled"
+                        aria-disabled="true"
+                >
+                    Create
+                </button>
             </div>
-            <div>
-                <p>Kthxbye</p>
-            </div>
-        </main>
-        <footer>
-            <div class="inner-div">
-                <p class="inner-div">Hi y'all</p>
-            </div>
-        </footer>
-    </body>
-    <script src="js/index.js"></script>
+        </div>
+    </form>
+</main>
+<script src="./js/index.js"></script>
+</body>
 </html>
