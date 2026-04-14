@@ -34,7 +34,9 @@ const logger = (event) => {
             value: ''
         };
 
-        toDoList.push(newItem);
+        const unshifted = toDoList.unshift(newItem, newItem, newItem);
+
+        console.log('unshifted', unshifted, toDoList);
 
         renderToDoList();
         // Adds a new item to the list
@@ -54,12 +56,11 @@ buttons.forEach((button, index) => {
 const holder = document.getElementById('form-holder');
 
 const renderItem = (i, holder) => {
-    console.log('toDoList', toDoList);
-
     const newItem = document.createElement('div');
     const newItemInput = document.createElement('input');
     const newItemLabel = document.createElement('label');
     const newItemError = document.createElement('p');
+    const newItemRemover = document.createElement('a');
 
     // Code around newItem holder creation
     newItem.className = 'item';
@@ -67,7 +68,7 @@ const renderItem = (i, holder) => {
 
     // Code around label creation
     newItemLabel.htmlFor = `item-${ i + 1}`;
-    newItemLabel.innerText = `To-do Item ${ i + 1 }`;
+    newItemLabel.innerText = `To-do Item ${ toDoList[i].id }`;
 
     // Code around error creation
     newItemError.className = 'error';
@@ -78,6 +79,10 @@ const renderItem = (i, holder) => {
     newItemInput.name = `item-${ i + 1}`;
     newItemInput.type = 'text';
     newItemInput.value = toDoList[i].value;
+
+    // Code around remover
+    newItemRemover.id = `item-remover-${ toDoList[i].id }`;
+    newItemRemover.innerText = 'x'
 
     newItemInput.addEventListener('input', (e) => {
         const value = e.currentTarget.value;
@@ -95,8 +100,21 @@ const renderItem = (i, holder) => {
         }
     });
 
+    newItemRemover.addEventListener('click', (e) => {
+        const itemToRemoveIndex = toDoList.findIndex((element) => {
+            return `item-remover-${ element.id }` === e.currentTarget.id;
+        });
+
+        const shifted = toDoList.shift();
+
+        console.log('toDoList', toDoList, shifted);
+
+        renderToDoList();
+    });
+
     newItem.appendChild(newItemLabel);
     newItem.appendChild(newItemInput);
+    newItem.appendChild(newItemRemover);
     newItem.appendChild(newItemError);
 
     holder.appendChild(newItem);

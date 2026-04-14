@@ -1,25 +1,23 @@
-let catPicture = '';
+const hobbies = [
+    'running',
+    'biking',
+    'fishing',
+    'hunting',
+    'coding'
+];
 
-//https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg
+hobbies.splice(3, 4);
 
-function addCatPics(catPictures) {
-    // The unordered list
-    var listHolder = document.getElementById('catPics');
-    listHolder.innerHTML = '';
+console.log('arrays!', hobbies);
 
-    for (var i = 0; i < catPictures.length; i++) {
-        // An array item
-        catPicture = catPictures[i];
+const hobbies2 = [
+    'running',
+    'biking',
+    'fishing',
+    'hunting',
+    'coding'
+];
 
-        // An html image
-        const img = document.createElement('img');
-        img.src = catPicture;
-        img.height = 200;
-        img.width = 200;
+const sliced = hobbies2.slice(2, 4);
 
-        // Add items to the list
-        var child = document.createElement('li');
-        child.appendChild(img);
-        listHolder.appendChild(child);
-    }
-}
+console.log('hobbies2!', sliced, hobbies2);
