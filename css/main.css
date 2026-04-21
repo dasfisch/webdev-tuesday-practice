@@ -4,6 +4,7 @@ body {
     font-size: 1.25rem;
     font-style: normal;
     font-weight: normal;
+    overflow: scroll;
 }
 
 .form {

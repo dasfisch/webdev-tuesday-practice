@@ -14,10 +14,19 @@ buttons = [
 
 const toDoItem = {
     id: 1,
-    value: ''
+    value: '',
+    changeId: function(id) {
+        this.id = id;
+    },
+    changeValue: function(value) {
+        this.value = value;
+    },
+    validateMe: function() {
+        return this.value.length > 10;
+    }
 };
 
-const toDoList = [
+let toDoList = [
     toDoItem
 ];
 
@@ -30,13 +39,11 @@ const logger = (event) => {
 
     if (button.id === 'add-new') {
         const newItem = {
-            id: toDoList.length + 1,
-            value: ''
+            ...toDoItem,
+            id: Math.round(Math.random() * 100),
         };
 
-        const unshifted = toDoList.unshift(newItem, newItem, newItem);
-
-        console.log('unshifted', unshifted, toDoList);
+        toDoList.push(newItem);
 
         renderToDoList();
         // Adds a new item to the list
@@ -49,6 +56,7 @@ const logger = (event) => {
         console.error('Unknown button', button, event);
     }
 };
+
 buttons.forEach((button, index) => {
     button.addEventListener('click', logger);
 });
@@ -72,7 +80,7 @@ const renderItem = (i, holder) => {
 
     // Code around error creation
     newItemError.className = 'error';
-    newItemError.innerText = `Enter valid to-do item ${ i + 1 }`;
+    newItemError.innerText = `Enter valid to-do item ${ toDoList[i].id }`;
 
     // Code around input creation
     newItemInput.id = `item-${ i + 1}`;
@@ -85,19 +93,19 @@ const renderItem = (i, holder) => {
     newItemRemover.innerText = 'x'
 
     newItemInput.addEventListener('input', (e) => {
+        const item = toDoList[i];
+
         const value = e.currentTarget.value;
 
-        toDoList[i].value = value;
+        item.changeValue(value);
 
-        if (value === '' || value.length === 0) {
+        if (item.validateMe() === false) {
             newItemError.style.display = 'flex';
-
-            submitButton.disabled = true;
         } else {
             newItemError.style.display = 'none';
-
-            submitButton.disabled = false;
         }
+
+        validateForm();
     });
 
     newItemRemover.addEventListener('click', (e) => {
@@ -106,8 +114,6 @@ const renderItem = (i, holder) => {
         });
 
         const shifted = toDoList.shift();
-
-        console.log('toDoList', toDoList, shifted);
 
         renderToDoList();
     });
@@ -129,10 +135,9 @@ const renderToDoList = () => {
 };
 
 function validateForm() {
-    for(const item of toDoList) {
-        if (item.value === '' || item.length === 0) {
-            submitButton.disabled = true;
-        }
+    if (toDoList.every((item) => item.validateMe() === true) === false) {
+        submitButton.disabled = true;
+    } else {
+        submitButton.disabled = false;
     }
 }
-
