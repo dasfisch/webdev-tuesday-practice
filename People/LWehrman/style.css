@@ -1,0 +1,16 @@
+* {
+    background-color: yellow ;
+}
+
+h1 {
+    color: black ;
+    font-size: 40px;
+    font-family: cursive
+}
+
+p {
+    color: rgb(9, 7, 110) ;
+    font-size: 24px;
+    font-weight: bold ;
+    font-family: cursive;
+}
